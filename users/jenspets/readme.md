@@ -55,7 +55,7 @@ The layers are:
 
 ### Base layers (Colemak-DH and Qwerty)
 
-The base layers (Colemak-DH and Qwerty) uses the homerow mods with the modifiers as GUI, ALT, CTRL, SHIFT layout with RALT/ AltGr on the bottom row. The AltGr is important for non-english language if the operating system's keymap is set to English International. In addition there are two hotkeys for temporary change layer to Lower, Raise, Adjust, Nav and Num. 
+The base layers (Colemak-DH and Qwerty) uses the homerow mods with the modifiers as GUI, ALT, CTRL, SHIFT layout with RALT/ AltGr on the bottom row. The AltGr is important for non-english language if the operating system's keymap is set to English International. In addition there are hotkeys for temporary change layer to Lower, Raise, Adjust, Nav and Num. 
 
 ### Lower
 
@@ -63,7 +63,7 @@ The Lower layer is for symbols, and have often used brackets and paranthesis on 
 
 ### Raise 
 
-The Raise layer includes F-keys and numbers. The numbers are laid out to maximize the amount of numbers the strongest fingers use. I assumed a uniform distribution of numbers in general, but where the first digit follows Benford's law. The implication is that the lowest digits are most used, and this is reflected in the keymap by placing the most-used numbers on the easiest-to-reach keys. 
+The Raise layer includes F-keys and numbers. The numbers are laid out to maximize the amount of numbers the strongest fingers use. I assumed a uniform distribution of numbers in general, but where the first digit follows Benford's law. The implication is that the lowest digits are most used, and this is reflected in the keymap by placing the most-used numbers on the easiest-to-reach keys. In addition, even numbers are on the right hand side, and odd numbers on the left side.
 
 There are toggles to the Nav and Num layer in this layer.
 
