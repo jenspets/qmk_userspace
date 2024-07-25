@@ -16,19 +16,19 @@ enum combos {
   COMBO_ADJ
 };
 
-const uint16_t PROGMEM space_combo[]  = {LCTL_T(KC_S), RCTL_T(KC_E), COMBO_END};
-const uint16_t PROGMEM bspace_combo[] = {LGUI_T(KC_A), LGUI_T(KC_O), COMBO_END};
-const uint16_t PROGMEM tab_combo[]    = {KC_G, KC_M, COMBO_END};
-const uint16_t PROGMEM esc_combo[]    = {LALT_T(KC_R), LALT_T(KC_I), COMBO_END};
-const uint16_t PROGMEM del_combo[]    = {KC_Q, KC_SCLN, COMBO_END};
-const uint16_t PROGMEM ent_combo[]    = {KC_V, KC_K, COMBO_END};
-const uint16_t PROGMEM lwr_combo[]    = {KC_P, KC_L, COMBO_END};
-const uint16_t PROGMEM rse_combo[]    = {KC_B, KC_J, COMBO_END};
-const uint16_t PROGMEM adj_combo[]    = {KC_P, KC_B, KC_J, KC_L, COMBO_END};
+const uint16_t PROGMEM spc_combo[] = {LCTL_T(KC_S), RCTL_T(KC_E), COMBO_END};
+const uint16_t PROGMEM bsp_combo[] = {LGUI_T(KC_A), LGUI_T(KC_O), COMBO_END};
+const uint16_t PROGMEM tab_combo[] = {KC_G, KC_M, COMBO_END};
+const uint16_t PROGMEM esc_combo[] = {LALT_T(KC_R), LALT_T(KC_I), COMBO_END};
+const uint16_t PROGMEM del_combo[] = {KC_Q, KC_SCLN, COMBO_END};
+const uint16_t PROGMEM ent_combo[] = {KC_V, KC_K, COMBO_END};
+const uint16_t PROGMEM lwr_combo[] = {KC_P, KC_L, COMBO_END};
+const uint16_t PROGMEM rse_combo[] = {KC_B, KC_J, COMBO_END};
+const uint16_t PROGMEM adj_combo[] = {KC_P, KC_B, KC_J, KC_L, COMBO_END};
 
 combo_t key_combos[] = {
-  [COMBO_SPC] = COMBO(space_combo, KC_SPC),
-  [COMBO_BSP] = COMBO(bspace_combo, KC_BSPC),
+  [COMBO_SPC] = COMBO(spc_combo, KC_SPC),
+  [COMBO_BSP] = COMBO(bsp_combo, KC_BSPC),
   [COMBO_TAB] = COMBO(tab_combo, KC_TAB),
   [COMBO_ESC] = COMBO(esc_combo, KC_ESC),
   [COMBO_DEL] = COMBO(del_combo, KC_DEL),
