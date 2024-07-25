@@ -5,8 +5,8 @@
 #define LAG_SWP KC_NO
 
 enum combos {
-  COMBO_SPACE,
-  COMBO_BSPACE,
+  COMBO_SPC,
+  COMBO_BSP,
   COMBO_TAB,
   COMBO_ESC,
   COMBO_DEL,
@@ -27,8 +27,8 @@ const uint16_t PROGMEM rse_combo[]    = {KC_B, KC_J, COMBO_END};
 const uint16_t PROGMEM adj_combo[]    = {KC_P, KC_B, KC_J, KC_L, COMBO_END};
 
 combo_t key_combos[] = {
-  [COMBO_SPACE] = COMBO(space_combo, KC_SPC),
-  [COMBO_BSPACE] = COMBO(bspace_combo, KC_BSPC),
+  [COMBO_SPC] = COMBO(space_combo, KC_SPC),
+  [COMBO_BSP] = COMBO(bspace_combo, KC_BSPC),
   [COMBO_TAB] = COMBO(tab_combo, KC_TAB),
   [COMBO_ESC] = COMBO(esc_combo, KC_ESC),
   [COMBO_DEL] = COMBO(del_combo, KC_DEL),
