@@ -1,3 +1,4 @@
+/* -*- c-file-style: "qmk" -*- */
 #include QMK_KEYBOARD_H
 #include <jenspets.h>
 

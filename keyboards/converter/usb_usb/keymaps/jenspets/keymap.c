@@ -1,3 +1,4 @@
+/* -*- c-file-style: "qmk" -*- */
 /*
 Copyright 2017 Balz Guenat <balz.guenat@gmail.com>
 

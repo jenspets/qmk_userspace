@@ -1,3 +1,4 @@
+/* -*- c-file-style: "qmk" -*- */
 /* Copyright 2021 Jens-Petter Sandvik <jens.petter.sandvik@gmail.com>
  * Based on the defaults by Thomas Baart <thomas@splitkb.com>
  *
@@ -311,7 +312,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record){
 		if (lsft) register_code(KC_LSFT);
 		if (rsft) register_code(KC_RSFT);
 	    } else {
-		SEND_STRING("the");
+	        SEND_STRING("the");
 	    }
 	}
 	break;
