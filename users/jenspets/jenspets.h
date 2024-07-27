@@ -11,20 +11,20 @@
 #define TO_GAME TO(_GAME)
 #define TG_GAME TG(_GAME)
 #else
-#define TO_GAME KC_TRNS
-#define TG_GAME KC_TRNS
+#define TO_GAME KC_NO
+#define TG_GAME KC_NO
 #endif
 
 #ifndef NO_QWERTY
 #define DF_QWERTY DF(_QWERTY)
 #else
-#define DF_QWERTY KC_TRNS
+#define DF_QWERTY KC_NO
 #endif
 
 #ifdef USE_PLOVER
 #define TO_PLOVER TO(_PLOVER)
 #else
-#define TO_PLOVER KC_TRNS
+#define TO_PLOVER KC_NO
 #endif
 
 #ifndef AUDIO_ENABLE
@@ -115,8 +115,8 @@ enum layers {
 
 #define ADJ_R2_L QK_BOOT, DB_TOGG, RGB_TOG, RGB_MOD, RGB_HUI
 #define ADJ_R2_R RGB_HUD, RGB_SAI, RGB_SAD, RGB_VAI, RGB_VAD
-#define ADJ_R3_L KC_SYRQ, KC_NO, KC_NO, KC_NO, LAG_NRM
-#define ADJ_R3_R LAG_SWP, DF(_COLEMAK), TO_GAME, DF_QWERTY, TO_PLOVER
+#define ADJ_R3_L KC_SYRQ, KC_NO, KC_NO, KC_NO, KC_NO
+#define ADJ_R3_R KC_NO, DF(_COLEMAK), TO_GAME, DF_QWERTY, TO_PLOVER
 #define ADJ_R4_L KC_NO, KC_NO, KC_NO, KC_NO, KC_NO
 #define ADJ_R4_R KC_NO, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
 #define ADJ_T_L  KC_TRNS, KC_PSCR
