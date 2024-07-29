@@ -37,7 +37,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_NUM] = LAYOUT_wrap(NUM_R2_L, NUM_R2_R,
 		       NUM_R3_L, NUM_R3_R,
 		       NUM_R4_L, NUM_R4_R,
-		       NUM_T_L, NUM_T_R)
+		       NUM_T_L, NUM_T_R),
+  [_AUDIO] = LAYOUT_wrap(AUD_R2_L, AUD_R2_R,
+			 AUD_R3_L, AUD_R3_R,
+			 AUD_R4_L, AUD_R4_R,
+			 AUD_T_L, AUD_T_R)
 };
 
 
