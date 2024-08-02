@@ -70,6 +70,9 @@
 #    define ENABLE_RGB_MATRIX_DIGITAL_RAIN
 #endif
 
+#define SPLIT_LAYER_STATE_ENABLE
+#define SPLIT_TRANSPORT_MIRROR
+
 // Not yet available in `keymap.json` format
 #ifdef MOUSEKEY_ENABLE
      // The default is 100
