@@ -103,8 +103,14 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record){
 #ifndef ENC_VOLUME
 #define ENC_VOLUME 255
 #endif
-#ifndef ENC_PAGE_UP_DN
-#define ENC_PAGE_UP_DN 255
+#ifndef ENC_PAGE_UD
+#define ENC_PAGE_UD 255
+#endif
+#ifndef ENC_LR
+#define ENC_LR 255
+#endif
+#ifndef ENC_UD
+#define ENC_UD 255
 #endif
 
 bool encoder_update_user(uint8_t index, bool clockwise) {
@@ -115,13 +121,25 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
         } else {
             tap_code(KC_VOLD);
         }
-    } else if (index == ENC_PAGE_UP_DN) {
+    } else if (index == ENC_PAGE_UD) {
         // Page up/Page down
         if (!clockwise) {
             tap_code(KC_PGDN);
         } else {
             tap_code(KC_PGUP);
         }
+    } else if (index == ENC_LR) {
+      if (!clockwise) {
+	tap_code(KC_LEFT);
+      } else {
+	tap_code(KC_RIGHT);
+      }
+    } else if (index == ENC_UD) {
+      if (!clockwise) {
+	tap_code(KC_UP);
+      } else {
+	tap_code(KC_DOWN);
+      }
     }
     return false;
 }
