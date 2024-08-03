@@ -1,7 +1,12 @@
 {
     "userspace_version": "1.0",
     "build_targets": [
+	["converter/usb_usb", "jenspets"],
+	["splitkb/kyria/rev1", "jenspets"],
         ["splitkb/aurora/sweep/rev1", "jenspets"],
-        ["waterfowl", "jenspets"]
+        ["waterfowl", "jenspets"],
+	["peej/lumberjack", "jenspets"],
+	["40percentclub/gherkin", "jenspets"],
+	["planck/rev6_drop", "jenspets"]
     ]
 }
