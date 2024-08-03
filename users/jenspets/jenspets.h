@@ -1,4 +1,6 @@
+/* -*- c-file-style: "mqk" -*- */
 #pragma once
+#include QMK_KEYBOARD_H   // In case we are loaded first
 
 #ifndef SWAP_HANDS_ENABLE
 #ifdef SH_T
@@ -47,6 +49,7 @@
 #define MI_ON KC_NO
 #define MI_OFF KC_NO
 #endif
+
 
 enum layers {
     _COLEMAK = 0,
@@ -157,3 +160,7 @@ enum layers {
 #define GAME2_R4_R KC_NO, KC_NO, KC_NO, KC_NO, KC_NO
 #define GAME2_T_L  KC_TRNS, KC_NO
 #define GAME2_T_R  KC_NO, TG_GAME
+
+enum custom_keycodes {
+  X_THE = SAFE_RANGE
+};

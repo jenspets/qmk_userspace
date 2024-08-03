@@ -76,3 +76,6 @@
 
 // For EEPROM handedness
 #define EE_HANDS
+
+#define ENC_VOLUME 0
+#define ENC_PAGE_UP_DN 1

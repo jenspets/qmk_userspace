@@ -20,10 +20,6 @@
 
 #define LAYOUT_wrap(...) LAYOUT(__VA_ARGS__)
 
-enum custom_keycodes {
-    X_THE = SAFE_RANGE
-};
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   /* COLEMAK
    *
@@ -76,25 +72,3 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 			 KC_TRNS, AUD_T_L, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, AUD_T_R, KC_TRNS)
 };
 
-bool process_record_user(uint16_t keycode, keyrecord_t *record){
-  switch (keycode) {
-  case X_THE: {
-    if  (record->event.pressed) {
-      uint16_t mods = get_mods() & MOD_MASK_SHIFT;
-      if (mods & MOD_MASK_SHIFT) {
-	uint16_t lsft = mods & MOD_BIT(KC_LSFT);
-	uint16_t rsft = mods & MOD_BIT(KC_RSFT);
-	unregister_code(KC_LSFT);
-	unregister_code(KC_RSFT);
-	SEND_STRING("The");
-	if (lsft) register_code(KC_LSFT);
-	if (rsft) register_code(KC_RSFT);
-      } else {
-	SEND_STRING("the");
-      }
-    }
-    break;
-  }
-  }
-  return true;
-};
