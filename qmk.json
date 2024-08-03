@@ -1,12 +1,12 @@
 {
     "userspace_version": "1.0",
     "build_targets": [
-	["converter/usb_usb", "jenspets"],
-	["splitkb/kyria/rev1", "jenspets"],
+        ["converter/usb_usb", "jenspets"],
+        ["splitkb/kyria/rev1", "jenspets"],
         ["splitkb/aurora/sweep/rev1", "jenspets"],
         ["waterfowl", "jenspets"],
-	["peej/lumberjack", "jenspets"],
-	["40percentclub/gherkin", "jenspets"],
-	["planck/rev6_drop", "jenspets"]
+        ["peej/lumberjack", "jenspets"],
+        ["40percentclub/gherkin/pro_micro", "jenspets"],
+        ["planck/rev6_drop", "jenspets"]
     ]
 }
