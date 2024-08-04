@@ -99,42 +99,58 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record){
 }
 
 #ifdef ENCODER_ENABLE
+#define ENC_REVERSE 0x80
 
-#ifndef ENC_VOLUME
+#ifndef ENC_VOLUME            // Volume 
 #define ENC_VOLUME 255
 #endif
-#ifndef ENC_PAGE_UD
+#ifndef ENC_VOLUME_REV        // Volume, reverse direction
+#define ENC_VOLUME_REV 255
+#endif
+#ifndef ENC_PAGE_UD           // Page up, page down
 #define ENC_PAGE_UD 255
 #endif
-#ifndef ENC_LR
+#ifndef ENC_PAGE_UD_REV       // Page up, down, reverse
+#define ENC_PAGE_UD_REV 255
+#endif
+#ifndef ENC_LR                // Left and right arrows
 #define ENC_LR 255
 #endif
-#ifndef ENC_UD
+#ifndef ENC_LR_REV            // Left and right arrows, reversed
+#define ENC_LR_REV 255
+#endif
+#ifndef ENC_UD                // Up and down arrows
 #define ENC_UD 255
+#endif
+#ifndef ENC_UD_REV            // Up and down, reversed
+#define ENC_UD_REV 255
 #endif
 
 bool encoder_update_user(uint8_t index, bool clockwise) {
-    if (index == ENC_VOLUME) {
+    if ((index == ENC_VOLUME_REV) || (index == ENC_PAGE_UD_REV) || (index == ENC_LR_REV) || (index == ENC_UD_REV)) {
+        clockwise = !clockwise;
+    }
+    if ((index == ENC_VOLUME) || (index == ENC_VOLUME_REV)) {
 	// Volume control
         if (!clockwise) {
             tap_code(KC_VOLU);
         } else {
             tap_code(KC_VOLD);
         }
-    } else if (index == ENC_PAGE_UD) {
+    } else if ((index == ENC_PAGE_UD) || (index == ENC_PAGE_UD_REV)) {
         // Page up/Page down
         if (!clockwise) {
             tap_code(KC_PGDN);
         } else {
             tap_code(KC_PGUP);
         }
-    } else if (index == ENC_LR) {
-      if (!clockwise) {
+    } else if ((index == ENC_LR) || (index == ENC_LR_REV)) {
+      if (clockwise) {
 	tap_code(KC_LEFT);
       } else {
 	tap_code(KC_RIGHT);
       }
-    } else if (index == ENC_UD) {
+    } else if ((index == ENC_UD) || (index == ENC_UD_REV)) {
       if (!clockwise) {
 	tap_code(KC_UP);
       } else {
