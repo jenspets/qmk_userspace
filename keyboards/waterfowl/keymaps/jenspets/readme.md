@@ -2,10 +2,13 @@
 
 The keymap is based on the 34-key base map defined in users/jenspets/. 
 
+## Compile
+The compile commands for the firmware is:
+
+	qmk flash -kb waterfowl -km jenspets -bl uf2-split-left
+	qmk flash -kb waterfowl -km jenspets -bl uf2-split-right
+
 ## TODOs
-- Figure out how to set right controller as main. Now OLEDs are upside down if I connect USB to the right controller
-- Add layer description to OLED
-- Add WPM counter / animation
 - Make a nice logo (the waterfowl is nice, but want to make it my own)
 - Figure out what to use encoders for
   - Page up/ down and volume is two I use on the Kyria, but what with the other two?
