@@ -83,8 +83,8 @@ oled_rotation_t oled_init_user(oled_rotation_t rotation) {
 bool oled_task_user(void) {
     if (is_keyboard_master()) {
         char wpmstr[11];
-
-        oled_write_P(" Waterfowl\n\n", false);
+	// Oled is 10 characters wide.
+        oled_write_P(PSTR(" Waterfowl\n\n"), false);
 
 	// Waterfowl always thinks it is left...
         if (is_keyboard_left()){
@@ -131,9 +131,9 @@ bool oled_task_user(void) {
 	
 	// Write host Keyboard LED Status to OLEDs
         led_t led_usb_state = host_keyboard_led_state();
-        oled_write_P(led_usb_state.num_lock    ? PSTR("NL ") : PSTR("   "), false);
-        oled_write_P(led_usb_state.caps_lock   ? PSTR("CL ") : PSTR("   "), false);
-        oled_write_P(led_usb_state.scroll_lock ? PSTR("SL") : PSTR("   "), false);
+        oled_write_P(led_usb_state.num_lock    ? PSTR("NUM ") : PSTR("    "), false);
+        oled_write_P(led_usb_state.caps_lock   ? PSTR("CAP ") : PSTR("    "), false);
+        oled_write_P(led_usb_state.scroll_lock ? PSTR("SC") : PSTR("  "), false);
     } else {
 	static const char PROGMEM my_logo[] = {
 	    // Paste the code from the previous step below this line!
