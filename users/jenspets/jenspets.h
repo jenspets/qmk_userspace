@@ -144,13 +144,13 @@ enum layers {
 #define NUM_T_R  KC_BSPC, TG(_NUM)
 
 #define GAME_R2_L KC_TAB, KC_Q, KC_W, KC_E, KC_R
-#define GAME_R2_R KC_ESC, KC_NO, KC_UP, KC_NO, KC_BSPC
+#define GAME_R2_R KC_ESC, KC_NO, KC_UP, KC_NO, KC_DEL
 #define GAME_R3_L KC_LCTL, KC_A, KC_S, KC_D, KC_F
-#define GAME_R3_R KC_NO, KC_LEFT, KC_DOWN, KC_RIGHT, KC_P0
+#define GAME_R3_R KC_P0, KC_LEFT, KC_DOWN, KC_RIGHT, KC_BSPC
 #define GAME_R4_L KC_LSFT, KC_Z, KC_X, KC_C, KC_V
 #define GAME_R4_R KC_NO, KC_NO, KC_NO, KC_NO, KC_ENT
 #define GAME_T_L  MO(_GAME2), KC_SPC
-#define GAME_T_R  KC_BSPC, KC_NO
+#define GAME_T_R  KC_SPC, KC_NO
 
 #define GAME2_R2_L KC_F1, KC_F2, KC_F3, KC_F4, KC_F5
 #define GAME2_R2_R KC_NO, KC_NO, KC_NO, KC_NO, KC_NO
