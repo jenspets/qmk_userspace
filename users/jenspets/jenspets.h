@@ -29,6 +29,14 @@
 #define TO_PLOVER KC_NO
 #endif
 
+#ifdef USE_NEWMODELF
+#define TO_FN MO(_FN)
+#define TO_FN2 MO(_FN2)
+#else
+#define TO_FN KC_NO
+#define TO_FN2 KC_NO
+#endif
+
 #ifndef AUDIO_ENABLE
 #undef MU_MOD
 #undef AU_ON
@@ -62,6 +70,10 @@ enum layers {
 #endif
 #ifdef USE_PLOVER
     _PLOVER,
+#endif
+#ifdef USE_NEWMODELF
+    _FN,
+    _FN2,
 #endif
     _LOWER,
     _RAISE,
